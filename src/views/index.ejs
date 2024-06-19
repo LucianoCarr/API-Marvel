@@ -1,63 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marvel</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/style.css">
-</head>
+
+    <%- include('partials/head',{
+        title : 'Marvel',
+      }) %>
 
 <body
-<header>
-    <h1>Marvel</h1>
-   
-</header>
+
+<%- include('partials/header') %>
     <main>
         <!-- Card -->
-        <article id="cartas" class="home-main-contenedor">
-        <% for(let character of characters){ %>
-    <div class="home_card col-lg-4 col-md-6 mb-4">
-        <div class="card">
-            <img src="<%= character.thumbnail.path %>/portrait_fantastic.<%= character.thumbnail.extension %>" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title"><%= character.name %></h5>
-              <p class="card-text"><%= character.description || '"Todavia no hay descripcion disponible"' %></p>
-            </div>
-          </div>
-    </div>
-          <% } %>
-        </article>
+        <%- include('partials/card') %>
 
         <!-- Pagination -->
-        <ul class="pagination">
-            <% if (currentPage > 1) { %>
-                <li><a href="?page=<%= currentPage - 1 %>">Anterior</a></li>
-            <% } %>
-    
-            <% if (currentPage > 3) { %>
-                <li><a href="?page=1">1</a></li>
-                <% if (currentPage > 4) { %>
-                    <li><span class="dots">...</span></li>
-                <% } %>
-            <% } %>
-    
-            <% for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) { %>
-                <li><a href="?page=<%= i %>" class="<%= currentPage === i ? 'active' : '' %>"><%= i %></a></li>
-            <% } %>
-    
-            <% if (currentPage < totalPages - 2) { %>
-                <% if (currentPage < totalPages - 3) { %>
-                    <li><span class="dots">...</span></li>
-                <% } %>
-                <li><a href="?page=<%= totalPages %>"><%= totalPages %></a></li>
-            <% } %>
-    
-            <% if (currentPage < totalPages) { %>
-                <li><a href="?page=<%= currentPage + 1 %>">Siguiente</a></li>
-            <% } %>
-        </ul>
+        <%- include('partials/pagination') %>
     </main>
-    <footer></footer>
+    
+    <%- include('partials/footer') %>
 </body>
 </html>

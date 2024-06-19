@@ -1,0 +1,27 @@
+<ul class="pagination">
+    <% if (currentPage > 1) { %>
+        <li><a href="?page=<%= currentPage - 1 %>">Anterior</a></li>
+    <% } %>
+
+    <% if (currentPage > 3) { %>
+        <li><a href="?page=1">1</a></li>
+        <% if (currentPage > 4) { %>
+            <li><span class="dots">...</span></li>
+        <% } %>
+    <% } %>
+
+    <% for (let i = Math.max(1, currentPage - 2); i <= Math.min(totalPages, currentPage + 2); i++) { %>
+        <li><a href="?page=<%= i %>" class="<%= currentPage === i ? 'active' : '' %>"><%= i %></a></li>
+    <% } %>
+
+    <% if (currentPage < totalPages - 2) { %>
+        <% if (currentPage < totalPages - 3) { %>
+            <li><span class="dots">...</span></li>
+        <% } %>
+        <li><a href="?page=<%= totalPages %>"><%= totalPages %></a></li>
+    <% } %>
+
+    <% if (currentPage < totalPages) { %>
+        <li><a href="?page=<%= currentPage + 1 %>">Siguiente</a></li>
+    <% } %>
+</ul>

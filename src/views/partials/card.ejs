@@ -1,0 +1,13 @@
+<article id="cartas" class="home-main-contenedor">
+    <% for(let character of characters){ %>
+<div class="home_card col-lg-4 col-md-6 mb-4">
+    <div class="card">
+        <img src="<%= character.thumbnail.path %>/portrait_fantastic.<%= character.thumbnail.extension %>" class="card-img-top" alt="">
+        <div class="card-body">
+          <h5 class="card-title"><%= character.name %></h5>
+          <p class="card-text"><%= character.description || '"Todavia no hay descripcion disponible"' %></p>
+        </div>
+      </div>
+</div>
+      <% } %>
+    </article>
