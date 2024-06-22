@@ -1,7 +1,68 @@
-/* cards */
+/* Header */
+.header-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #0ad5f3bd;
+}
 
-.home_card {
-    width: 23%;
+.logo {
+    border-radius: 50%;
+    width: 10%;
+    border: solid 5px white;
+}
+
+.title {
+    align-content: center;
+    font-size: 6rem;
+    background-color: red;
+    color: white;
+    text-shadow: 12px 12px black;
+    border: solid white 3px;
+    padding: 9px;
+}
+
+/* Buscador */
+
+#form-search {
+    align-content: center;
+}
+
+.search {
+    background-color: rebeccapurple;
+    transition: all 0.1s;
+    border-radius: 15px;
+    padding: 5px 8px;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    flex-grow: 1;
+    color: #fafafa;
+    outline: none;
+    font-size: .9rem;
+}
+
+.search button {
+    background: none;
+    border: none;
+    color: #fafafa;
+    font-size: .9rem;
+}
+
+.search button i {
+    padding: 5px;
+    position: relative;
+    right: 5px;
+    border-left: 1px solid #fafafa;
+}
+
+/* Main */
+
+main {
+    background-color: rebeccapurple;
 }
 
 .home-main-contenedor {
@@ -10,6 +71,12 @@
     padding: 20px;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+/* cards */
+
+.home_card {
+    width: 23%;
 }
 
 /* pagination */

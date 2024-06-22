@@ -1,5 +1,0 @@
-clave publica: 8ddf04f2b37b8e5a398c31e738bae8c9
-clave privada: 70d3fd6060aebcda2f2a2c0ccd35cd0faf887379
-Hash: 3ba4efd71f7cfcb0badea8c0c22c74b3
-
-Pagina de personajes: https://gateway.marvel.com/v1/public/characters?ts=1&apikey=8ddf04f2b37b8e5a398c31e738bae8c9&hash=3ba4efd71f7cfcb0badea8c0c22c74b3
