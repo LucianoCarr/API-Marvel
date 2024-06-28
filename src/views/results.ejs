@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/head',{
+        title : 'Marvel',
+      }) %>
+
+<body
+
+<%- include('partials/header') %>
+    <main>
+        <!-- Buscador -->
+       <h1>Resultados de la Búsqueda</h1>
+    <p>Resultados para: "<%= keywords %>"</p>
+
+    <article id="cartas" class="home-main-contenedor">
+        <% if (results.length) { %>
+            <% for(let character of results){ %>
+    <div class="home_card col-lg-4 col-md-6 mb-4">
+        <div class="card">
+            <img src="<%= character.thumbnail.path %>/portrait_fantastic.<%= character.thumbnail.extension %>" class="card-img-top" alt="">
+            <div class="card-body">
+              <h5 class="card-title"><%= character.name %></h5>
+              <p class="card-text"><%= character.description || '"Todavia no hay descripcion disponible"' %></p>
+            </div>
+          </div>
+    </div>
+    <% } %>
+    <% } else { %>
+        <div>
+            <p>No sex encontraron resultados.</p>
+            <div>
+                <img src="/img/default-image.png" alt="">
+            </div>
+        </div>
+    <% } %>
+        </article>
+
+    <a href="/">Volver a la página principal</a>
+
+    </main>
+    
+    <%- include('partials/footer') %>
+</body>
+</html>

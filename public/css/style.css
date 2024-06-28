@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     gap: 10px;
-    background-color: #0ad5f3bd;
+    background-color: #66C7F4;
 }
 
 .logo {
@@ -20,6 +20,11 @@
     text-shadow: 12px 12px black;
     border: solid white 3px;
     padding: 9px;
+}
+
+.title-a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Buscador */
@@ -55,7 +60,6 @@
 .search button i {
     padding: 5px;
     position: relative;
-    right: 5px;
     border-left: 1px solid #fafafa;
 }
 
