@@ -10,9 +10,7 @@
 <%- include('partials/header') %>
     <main>
         <!-- Buscador -->
-       <h1>Resultados de la Búsqueda</h1>
-    <p>Resultados para: "<%= keywords %>"</p>
-
+       <h1 class="result">Resultados de la Búsqueda para: "<%= keywords %>"</h1>
     <article id="cartas" class="home-main-contenedor">
         <% if (results.length) { %>
             <% for(let character of results){ %>
@@ -27,16 +25,16 @@
     </div>
     <% } %>
     <% } else { %>
-        <div>
-            <p>No sex encontraron resultados.</p>
-            <div>
-                <img src="/img/default-image.png" alt="">
+        <article id="cartas-no" class="home-main-contenedor">
+            <h2 class="no-result">Opps... No se encontraron resultados.</h2>
+            <div class="no-result-img">
+                <img class="img-no-found" src="https://i0.wp.com/movienooz.com/wp-content/uploads/2018/10/Deadpool-Oops.jpg?resize=800%2C445&ssl=1" alt="">
             </div>
-        </div>
+        </article>
     <% } %>
         </article>
 
-    <a href="/">Volver a la página principal</a>
+    <a class="back" href="/"><img class="back-img" src="https://cdn-icons-png.freepik.com/512/5423/5423980.png" alt=""></a>
 
     </main>
     
