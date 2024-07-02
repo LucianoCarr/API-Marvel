@@ -5,9 +5,30 @@
         <img src="<%= character.thumbnail.path %>/portrait_fantastic.<%= character.thumbnail.extension %>" class="card-img-top" alt="">
         <div class="card-body">
           <h5 class="card-title"><%= character.name %></h5>
-          <p class="card-text"><%= character.description || '"Todavia no hay descripcion disponible"' %></p>
+          <% if (character.description && character.description.length > 100) { %>
+            <p class="card-text"><%= character.description %></p>
+            <p class="see-more" onclick="mostrarMas(this)">Ver más ↓</p>
+          <% } else { %>
+            <p class="card-text description"><%= character.description || '"Todavía no hay descripción disponible"' %></p>
+          <% } %>
         </div>
       </div>
 </div>
       <% } %>
     </article>
+
+
+    <script>
+      function mostrarMas(boton) {
+        var cardBody = boton.parentNode; // Obtener el nodo padre del botón, que es el div con la clase "card-body"
+        var descripcion = cardBody.querySelector('.card-text'); // Seleccionar directamente el párrafo con la descripción
+        
+        if (descripcion.style.maxHeight) {
+          descripcion.style.maxHeight = null;
+          boton.innerHTML = 'Ver más ↓';
+        } else {
+          descripcion.style.maxHeight = descripcion.scrollHeight + 'px'; /* Altura máxima inicial */
+          boton.innerHTML = 'Ver menos ↑';
+        }
+      }
+      </script>

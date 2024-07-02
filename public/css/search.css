@@ -1,0 +1,34 @@
+/* Buscador */
+#form-search {
+    align-content: center;
+}
+
+.search {
+    background-color: rebeccapurple;
+    transition: all 0.1s;
+    border-radius: 15px;
+    padding: 5px 8px;
+}
+
+.search input {
+    background-color: transparent;
+    border: none;
+    padding-left: 10px;
+    flex-grow: 1;
+    color: #fafafa;
+    outline: none;
+    font-size: .9rem;
+}
+
+.search button {
+    background: none;
+    border: none;
+    color: #fafafa;
+    font-size: .9rem;
+}
+
+.search button i {
+    padding: 5px;
+    position: relative;
+    border-left: 1px solid #fafafa;
+}

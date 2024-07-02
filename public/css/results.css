@@ -1,0 +1,32 @@
+/* resultados */
+.result {
+    text-align: center;
+    text-decoration: underline;
+    color: white;
+}
+
+.img-no-found {
+    width: 70%;
+}
+
+.back-img {
+    position: fixed;
+    bottom: 8px;
+    right: 15px;
+    width: 6%;
+    border-radius: 50%;
+}
+
+#cartas-no {
+    justify-content: center;
+}
+
+.no-result {
+    text-align: center;
+    color: red;
+}
+
+.no-result-img {
+    text-align: center;
+}
+

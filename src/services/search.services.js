@@ -1,6 +1,6 @@
 let cachedCharacters = [];
 let cacheTime = 0;
-const limit = 20;
+const limit = 100;
 const cacheDuration = 7 * 24 * 60 * 60 * 1000  // 7 dias
 const characterTotal = 1563
 
