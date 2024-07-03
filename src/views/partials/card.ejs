@@ -7,7 +7,7 @@
           <h5 class="card-title"><%= character.name %></h5>
           <% if (character.description && character.description.length > 100) { %>
             <p class="card-text"><%= character.description %></p>
-            <p class="see-more" onclick="mostrarMas(this)">Ver más ↓</p>
+            <button class="see-more" onclick="mostrarMas(this)">Ver más ↓</button>
           <% } else { %>
             <p class="card-text description"><%= character.description || '"Todavía no hay descripción disponible"' %></p>
           <% } %>

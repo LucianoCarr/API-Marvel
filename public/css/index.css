@@ -11,27 +11,26 @@ main {
     justify-content: space-between;
 }
 
-#cartas-no {
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
 /* cards */
 .home_card {
     width: 23%;
 }
+
+.card-body {
+    text-align: center;
+}
+
 .card-text {
     max-height: 70px;
     overflow: hidden; 
 }
 
 .see-more {
-        color: blue;
-        text-align: center;
-        font-family: cursive;
+    color: blue;
+    text-align: center;
+    font-family: cursive;
+    border: 0;
+    background-color: white;
 }
 
 /* Tablet */
@@ -43,10 +42,6 @@ main {
 
     .back-img  {
         width: 8%;
-    }
-
-    .see-more {
-        margin-left: 102px;
     }
 }
 
@@ -67,13 +62,17 @@ main {
         padding: 5px 4px;
     }
     
+
     #cartas {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
     }
 
     .home_card {
-        width: 94%;
+        width: 30%;
     }
 
     .back-img {
@@ -83,10 +82,6 @@ main {
     .container, .container-md, .container-sm {
         max-width: 850px;
     }
-
-    .see-more {
-        margin-left: 34px;
-    }
 }
 
 /* Movil medium */
@@ -95,15 +90,6 @@ main {
     .logo {
         display: none;
     }
-    
-    #cartas {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .see-more {
-        margin-left: 50px;
-    }
 
     .back-img  {
         width: 15%;
@@ -111,6 +97,18 @@ main {
 
     .result {
         font-size: 24px;
+    }
+
+    #cartas {
+        width: 100%;
+        display: flex;
+        padding: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .home_card {
+        width: 48%;
     }
 
     .footer-text {
