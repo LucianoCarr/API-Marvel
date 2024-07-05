@@ -2,6 +2,9 @@
 main {
     background-color: rebeccapurple;
 }
+.si {
+    display: flex;
+}
 
 #cartas {
     width: 100%;
@@ -34,7 +37,7 @@ main {
 }
 
 /* Tablet */
-@media (min-width: 769px) {
+@media (max-width: 1440px) {
 
     .logo {
         width: 16%;
@@ -43,10 +46,16 @@ main {
     .back-img  {
         width: 8%;
     }
+    .html {
+        width: 103%;
+    }
+    .search {
+        padding: 5px 1px;
+    }
 }
 
-/* Movil */
-@media (max-width: 426px) {
+/* Movil large */
+@media (max-width: 740px) {
     html {
         width: 135%;
     }
@@ -116,6 +125,7 @@ main {
     }
 }
 
+/* Movil small */
 @media (max-width: 322px) {
 
     .search {
